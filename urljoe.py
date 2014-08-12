@@ -52,7 +52,7 @@ def force_cacheload(url):
 	log('loading from cache %r' % url, 5)
 	dbc.execute("SELECT data FROM urlcache WHERE url=?", (url,))
 	results = dbc.fetchall()
-	cache[url] = results[0]
+	cache[url] = results[0][0]
 
 def initcache(filename):
 	import os.path, os, sqlite3
@@ -84,4 +84,4 @@ verbose_level = 5
 initcache('urlcache.db')
 
 
-
+print(urlread('http://www.google.com'))
