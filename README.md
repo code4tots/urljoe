@@ -1,7 +1,7 @@
 urljoe
 =======
 
-Noobie friendly http requester with caching.
+Noobie friendly urllib wrapper with caching.
 
 By default, writes caches to 'urlcache.db'.
 
