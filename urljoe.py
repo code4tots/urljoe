@@ -79,5 +79,3 @@ def initcache(filename):
 verbose_level = 5
 initcache('urlcache.db')
 
-
-print(type(urlread('http://www.google.com')))
