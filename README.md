@@ -11,7 +11,8 @@ of a script that downloads data from the internet.
 
 Example
 
+```python
+from urljoe import urlread
 
-	from urljoe import urlread
-
-	stuff = urlread('http://www.google.com')
+stuff = urlread('http://www.google.com')
+```
