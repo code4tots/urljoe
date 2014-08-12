@@ -1,1 +1,3 @@
 urlcache.db
+*.pyc
+*~
