@@ -10,9 +10,11 @@ of a script that downloads data from the internet.
 
 try:
 	# Python 3
+	PYTHON3 = True
 	import urllib.request as request
 except:
 	# Python 2
+	PYTHON3 = False
 	import urllib2 as request
 
 def log(message, level):
@@ -31,7 +33,10 @@ def urlread(url):
 def force_urlread(url):
 	log('fetching %r' % url, 5)
 	f = request.urlopen(url)
-	content = f.read().decode('utf-8')
+	content = f.read()
+	if not PYTHON3:
+		content = content.decode('utf-8')
+	
 	f.close()
 	
 	## Strange... urlopen objects have no __exit__
