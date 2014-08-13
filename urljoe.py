@@ -61,7 +61,7 @@ def initcache(filename):
 	dbc.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='urlcache'")
 	if not dbc.fetchall():
 		log("creating table 'urlcache'", 5)
-		dbc.execute("CREATE TABLE urlcache (url TEXT UNIQUE, data text)")
+		dbc.execute("CREATE TABLE urlcache (url TEXT UNIQUE, data TEXT)")
 	else:
 		log("Using existing 'urlcache' table", 5)
 	
